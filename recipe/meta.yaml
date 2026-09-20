@@ -1,4 +1,4 @@
-{% set version = '0.0-6' %}
+{% set version = "0.0-7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/frab_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/frab/frab_{{ version }}.tar.gz
-  sha256: ac749f212838ccfde89d468ec09b95ba02db935965972ec97caea390158ba7f0
+  sha256: eea0361abe770852bdd0c3db78ae69e8f1b99700718d272215c3fcbe3d28a106
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,12 +52,8 @@ test:
 about:
   home: https://github.com/RobinHankin/frab
   license: GPL-2.0-or-later
-  summary: Methods to "add" two R tables; also an alternative interpretation of named vectors
-    as generalized R tables, so that c(a=1,b=2,c=3) + c(b=3,a=-1) will return c(b=5,c=3).  Uses
-    'disordR' discipline (Hankin, 2022, <doi:10.48550/arXiv.2210.03856>).  Extraction
-    and replacement methods are provided.  The underlying mathematical structure is
-    the Free Abelian group, hence the name.  To cite in publications please use Hankin
-    (2023) <doi:10.48550/arXiv.2307.13184>.
+  summary: Methods to "add" two R tables; also an alternative interpretation of named vectors as generalized R tables, so that c(a=1,b=2,c=3) + c(b=3,a=-1) will return c(b=5,c=3).  Uses 'disordR' discipline (Hankin, 2022, <doi:10.48550/arXiv.2210.03856>).  Extraction and replacement methods are provided.  The 
+    underlying mathematical structure is the Free Abelian group, hence the name.  To cite in publications please use Hankin (2023) <doi:10.48550/arXiv.2307.13184>.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
